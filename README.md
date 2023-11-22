@@ -12,7 +12,7 @@
 
 - has_many :reads
 
-## read テーブル
+## reads テーブル
 
 |Column  |Type        |Options       |
 |--------|----------- |------------- |
