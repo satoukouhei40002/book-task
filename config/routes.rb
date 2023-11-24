@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  # get '/read', to: 'reads#index'
-  root to: "reads#index"
+  devise_for :users
+
+    root to: "reads#index"
+
+    resources :users, only: :show
 end
