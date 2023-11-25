@@ -3,7 +3,12 @@
     <% if user_signed_in? %>
       <div class="greeting"> 
         <%= "こんにちは、#{current_user.nickname}さん!" %>
-
        </div>
     <% else %>
     <% end %>
+
+    <%= month_calendar do |date| %>
+      <%= date %>
+    <% end %>
+
+
