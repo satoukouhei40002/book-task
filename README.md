@@ -14,12 +14,12 @@
 
 ## reads テーブル
 
-|Column  |Type        |Options       |
-|--------|----------- |------------- |
-|name    | string     | null : false |
-|content | string     | null : false |
-|day     | date       | null : false |
-|user    | references | null : false |
+|Column    |Type        |Options       |
+|--------  |----------- |------------- |
+|book_name | string     | null : false |
+|content   | text       | null : false |
+|day       | datetime   | null : false |
+|user      | references | null : false |
 
 ### Association
 
