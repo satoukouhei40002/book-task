@@ -7,21 +7,9 @@
     <% else %>
     <% end %>
 
-<p id="notice"><%= notice %></p>
+    <%= month_calendar do |date| %>
+      <%= date %>
+    <% end %>
 
-<div class="toppage">
-<h1 class="top">カレンダー</h1>
 
-<div class="col-md-8">
-<%= month_calendar events: @reads do |date, reads| %>
-  <%= date.day %>
 
-  <% reads.each do |read| %>
-    <div>
-      <%= link_to read.title, read %>
-    </div>
-  <% end %>
-<% end %>
-</div>
-</div>
-</div>

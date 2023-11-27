@@ -1,12 +1,9 @@
 class ReadsController < ApplicationController
-<<<<<<< Updated upstream
 
-  def index 
-    
-=======
   def index
     @reads = Read.all
     @read = Read.new
+
   end
   
   def new
@@ -15,7 +12,7 @@ class ReadsController < ApplicationController
 
   def show
     @read = Read.find(params[:id])
->>>>>>> Stashed changes
+
   end
 
   def create
