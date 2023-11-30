@@ -10,17 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3fe7d980081af42cf43c67ed98a1140d48683c3
 ActiveRecord::Schema[7.0].define(version: 2023_11_25_061018) do
   create_table "reads", charset: "utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "content", null: false
+<<<<<<< HEAD
     t.datetime "start_time"
+=======
+    t.datetime "start_time", null: false
+
+>>>>>>> c3fe7d980081af42cf43c67ed98a1140d48683c3
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reads_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3fe7d980081af42cf43c67ed98a1140d48683c3
   create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
