@@ -309,10 +309,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.0)
   rails-i18n
-<<<<<<< HEAD
-=======
   rspec-rails (~> 4.0.0)
->>>>>>> c3fe7d980081af42cf43c67ed98a1140d48683c3
   sassc-rails
   selenium-webdriver
   simple_calendar (~> 2.4)

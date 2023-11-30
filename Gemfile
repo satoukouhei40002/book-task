@@ -88,7 +88,4 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c3fe7d980081af42cf43c67ed98a1140d48683c3
