@@ -82,6 +82,19 @@ function reSet()
 
 <%= form_with(model: @read, local: true) do |form| %>
 
+<% if @read.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@read.errors.count, "error") %> prohibited this read from being saved:</h2>
+
+    <ul>
+      <% @read.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
   <div class="title">
     <%= form.label :title %>
     <%= form.text_field :title %>

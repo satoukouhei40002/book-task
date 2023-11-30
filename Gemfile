@@ -78,9 +78,10 @@ end
 gem 'bootstrap', '~> 5.2.3'
 gem 'jquery-rails'
 gem 'devise'
-<<<<<<< Updated upstream
-=======
 gem "simple_calendar", "~> 2.4"
 gem 'rails-i18n'
+gem 'pry-rails'
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
 
->>>>>>> Stashed changes

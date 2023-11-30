@@ -16,6 +16,8 @@
 </p>
 
 <%= link_to '編集', edit_read_path(@read) %>
-<%= link_to '消去',read_path(@read.id), method: :delete, data: { confirm: '本当に?' } %>
+
+<%= button_to "削除", read_path(@read), method: :delete %>
+
 <%= link_to '戻る', reads_path %>
 </div>

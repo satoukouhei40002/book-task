@@ -1,9 +1,5 @@
 class ReadsController < ApplicationController
-<<<<<<< Updated upstream
 
-  def index 
-    
-=======
   def index
     @reads = Read.all
     @read = Read.new
@@ -15,7 +11,6 @@ class ReadsController < ApplicationController
 
   def show
     @read = Read.find(params[:id])
->>>>>>> Stashed changes
   end
 
   def create
@@ -24,6 +19,7 @@ class ReadsController < ApplicationController
     if @read.save
       redirect_to reads_path, notice: '投稿が保存されました'
     else
+      puts @read.errors.full_messages
       render 'new'
     end
   end
@@ -31,8 +27,9 @@ class ReadsController < ApplicationController
   def destroy
     @read = Read.find(params[:id])
     @read.destroy
-    redirect_to reads_path, notice:"削除しました"
+    redirect_to root_path
   end
+  
 
   def edit
     @read = Read.find(params[:id])
@@ -50,7 +47,7 @@ class ReadsController < ApplicationController
   private
 
   def read_parameter
-    params.require(:read).permit(:title, :content)
+    params.require(:read).permit(:title, :content, :start_time).merge(user_id: current_user.id)
   end
 
 end

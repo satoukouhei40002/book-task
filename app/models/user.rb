@@ -5,4 +5,8 @@ class User < ApplicationRecord
 
 
   validates :nickname, presence: true
+
+  def remember_me
+    true
+  end
 end
