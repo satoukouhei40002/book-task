@@ -3,4 +3,6 @@ ja:
     attributes:
       user:
         name: "ユーザー名"
-
+  errors:
+    messages:
+      not_saved: ""

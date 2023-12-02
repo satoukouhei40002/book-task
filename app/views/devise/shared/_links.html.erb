@@ -3,7 +3,7 @@
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "登録がまだの方はこちらから登録お願いします", new_registration_path(resource_name) %><br />
+  <%= link_to content_tag(:button, "新規登録", type: "button", class: "btn btn-primary"), new_registration_path(resource_name) %><br />
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
