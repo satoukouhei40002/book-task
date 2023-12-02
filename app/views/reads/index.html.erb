@@ -1,14 +1,29 @@
 <%= render "shared/header" %>
 
-    <% if user_signed_in? %>
-      <div class="greeting"> 
-        <%= "こんにちは、#{current_user.nickname}さん!" %>
-       </div>
-    <% else %>
+<% if user_signed_in? %>
+  <div class="greeting"> 
+    <%= "こんにちは、#{current_user.nickname}さん!" %>
+  </div>
+<% else %>
+<% end %>
+
+
+
+
+<div class="toppage">
+  <h1 class="top">読書カレンダー</h1>
+
+
+
+    <div class="calendar">
+    <%= month_calendar events: @reads do |date, reads| %>
+      <%= date.day %>
+      <% reads.each do |read| %>
+        <div>
+          <%= link_to read.title, read %>
+        </div>
+      <% end %>
     <% end %>
-
-    <%= month_calendar do |date| %>
-      <%= date %>
-    <% end %>
-
-
+    </div>
+  </div>
+</div>

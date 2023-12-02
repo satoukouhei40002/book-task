@@ -14,6 +14,7 @@
 
 ## reads テーブル
 
+
 |Column    |Type        |Options       |
 |--------  |----------- |------------- |
 |book_name | string     | null : false |

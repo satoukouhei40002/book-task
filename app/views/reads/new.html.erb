@@ -1,0 +1,52 @@
+<div class='timer'>
+  <h1>読書をしましょう！！！</h1>
+  <div>6分が推奨時間です!</div>
+
+  <form name="timer">
+    <input type="text" value="">分
+    <input type="text" value="">秒<br>
+    <input type="button" value="スタート" onclick="cntStart()">
+    <input type="button" value="ストップ" onclick="cntStop()">
+  </form>
+
+  <script src="app/javascript/timer.js"></script>
+
+
+  <%= form_with(model: @read, local: true) do |form| %>
+
+  <% if @read.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@read.errors.count, "error") %> prohibited this read from being saved:</h2>
+
+      <ul>
+        <% @read.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="title">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+
+      <div class="time">
+      <%= form.label :start_time %>
+      <%= form.datetime_select :start_time %>
+    </div>
+
+    <div class="content">
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+    </div>
+
+
+    <div class="submit">
+      <%= form.submit %>
+    </div>
+
+  <% end %>
+</div>
+

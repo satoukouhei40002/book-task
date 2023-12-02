@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="show">
+<p>
+  <strong>タイトル</strong>
+  <%= @read.title %>
+</p>
+
+<p>
+  <strong>内容</strong>
+  <%= @read.content %>
+</p>
+
+<p>
+  <strong>日時</strong>
+  <%= @read.start_time.strftime("%m-%d") %>
+</p>
+
+<div class="show-button">
+  <%= link_to edit_read_path(@read), class: 'btn btn-primary' do %>
+  編集
+  <% end %>
+
+  <%= button_to read_path(@read), method: :delete, class: 'btn btn-primary', data: { confirm: '本当に削除しますか？' } do %>
+    削除
+  <% end %>
+
+  <%= link_to reads_path, class: 'btn btn-primary' do %>
+    戻る
+  <% end %>
+</div>

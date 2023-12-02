@@ -1,7 +1,6 @@
 @import "bootstrap";
 @import "simple_calendar";
 
-
 * {
   box-sizing: border-box;
  }
@@ -10,3 +9,80 @@ body {
   background-color: #FEDCBD;
 }
 
+
+
+// ログイン画面 
+.form-wrap {
+  text-align: center;
+
+}
+.text {
+  list-style: none;
+}
+
+// サインアップ画面
+.form-text-wrap {
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+}
+
+.field {
+  text-align: center;
+}
+
+// indexページ
+.toppage {
+  text-align: center;
+}
+
+.col-md-8 {
+  text-align: center;
+}
+
+// カレンダー
+.simple-calendar {
+  /* 他のスタイルがあればここに追加 */
+
+  .calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* 文字色を黒に設定 */
+  }
+}
+
+// 新規投稿画面
+.timer {
+  text-align: center;
+}
+
+// 編集画面
+.edit {
+  text-align: center;
+}
+
+// 詳細画面
+.show {
+  text-align: center;
+  position: relative;
+}
+
+.show-button {
+  display: flex;
+  flex-direction: column; /* ボタンを垂直に配置 */
+  align-items: center; /* ボタンを水平・垂直方向に中央揃え */
+  margin-top: 20px; /* ボタンを上に移動 */
+}
+
+
+.show-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.show-button .btn {
+  margin: 5px; /* ボタンの余白を調整 */
+}
