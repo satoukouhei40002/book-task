@@ -15,9 +15,16 @@
   <%= @read.start_time.strftime("%m-%d") %>
 </p>
 
-<%= link_to '編集', edit_read_path(@read) %>
+<div class="show-button">
+  <%= link_to edit_read_path(@read), class: 'btn btn-primary' do %>
+  編集
+  <% end %>
 
-<%= button_to "削除", read_path(@read), method: :delete %>
+  <%= button_to read_path(@read), method: :delete, class: 'btn btn-primary', data: { confirm: '本当に削除しますか？' } do %>
+    削除
+  <% end %>
 
-<%= link_to '戻る', reads_path %>
+  <%= link_to reads_path, class: 'btn btn-primary' do %>
+    戻る
+  <% end %>
 </div>

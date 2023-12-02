@@ -1,11 +1,12 @@
 <%= render "shared/header" %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= render "devise/shared/error_messages", resource: resource %>
 <div class='form-wrap'>
   <div class="content" >
     <div class="content" >1日の240分の1（6分）の時間を使い毎日本を読みましょう!!!</div>
     <div>本を読んで得られること
-      <ul>
+      <ul class='text'>
         <li>人間の考えは昔も今もそんなに事実ベースで言うと変わっていないのが現状です！！<br>
             手っ取り早く先人の知恵を得れるのが本です！</li>
         <li>イギリスのサセックス大学の検証によると1日6分の読書でストレスレベルが66%減少する結果が出ています。<br>
@@ -38,7 +39,7 @@
       <div class="actions">
         <%= f.submit "Log in" %>
       </div>
+
+  <%= render "devise/shared/links" %>
 </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
