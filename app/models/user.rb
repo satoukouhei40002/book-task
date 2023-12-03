@@ -3,10 +3,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :reads
 
-
   validates :nickname, presence: true
-
-  def remember_me
-    true
-  end
 end
