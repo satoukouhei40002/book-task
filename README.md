@@ -35,7 +35,7 @@ https://book-task-1b8s.onrender.com/users/sign_in
   https://docs.google.com/spreadsheets/d/1f_-279Y8BDm70suQMkSF6JkwCyMcPmQg2RclVe_EHro/edit#gid=982722306　　
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/902c925dfa7f060998a616a21b29eeb9.png)](https://gyazo.com/902c925dfa7f060998a616a21b29eeb9)
+[![Image from Gyazo](https://i.gyazo.com/547e599049d01a77982ee344d1d5e98d.png)](https://gyazo.com/547e599049d01a77982ee344d1d5e98d)
 
 # 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/45c9d4f59f54c7055c18df742a382d3c.png)](https://gyazo.com/45c9d4f59f54c7055c18df742a382d3c)
