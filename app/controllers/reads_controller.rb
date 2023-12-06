@@ -48,7 +48,7 @@ class ReadsController < ApplicationController
   private
 
   def read_parameter
-    params.require(:read).permit(:title, :content, :start_time).merge(user_id: current_user.id)
+    params.require(:read).permit(:title, :start_time, :content).merge(user_id: current_user.id)
   end
 
 end
