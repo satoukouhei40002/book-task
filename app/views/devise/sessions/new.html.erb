@@ -1,40 +1,27 @@
 <%= render "shared/header" %>
-<%= render "devise/shared/error_messages", resource: resource %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class='form-wrap'>
-  <div class="content" >
-    <div class="content" >1日の240分の1（6分）の時間を使い毎日本を読みましょう!!!</div>
-    <div>本を読んで得られること
-      <ul class='text'>
-        <li>人間の考えは昔も今もそんなに事実ベースで言うと変わっていないのが現状です！！<br>
-            手っ取り早く先人の知恵を得れるのが本です！</li>
-        <li>イギリスのサセックス大学の検証によると1日6分の読書でストレスレベルが66%減少する結果が出ています。<br>
-            本を読んでストレスを軽減させましょう</li>
-        <li>本を読むことにより、論理的思考が身についてコミュニケーション能力が格段に上がります!<br>
-            本を読んで、コミュ力を上げていきましょう！</li>
-        <li>最後に、、、本読むとモテます！！！<br>
-            さぁ今からスタバに行ってコーヒーを飲みながら本を読みましょう！！！
-        </li>
-      </ul>
+  <div class="form-wrap-inner">
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        ログイン
+      </h1>
     </div>
-  </div> 
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      ログイン
-    </h1>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="field">
+      <%= f.label :email, class: "field-text" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-text"  %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <div class="field">
+      <%= f.label :password, class: "field-text" %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+    <div class="button">
+      <div class="actions">
+        <%= f.submit "ログイン", class: "btn btn-primary" %>
+      </div>
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-primary" %>
-  </div>
-<%= render "devise/shared/links" %>
 </div>
 <% end %>

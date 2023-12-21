@@ -9,20 +9,98 @@ body {
   background-color: #FEDCBD;
 }
 
+// ヘッダー
+.navbar-bran {
+  background-color: white;
+  width: auto;
+  height: auto;
+  padding-left: 5px;
+  border-radius: 15px;
+  color: brown;
+  font-size: 35px;
+  
+}
+
 // エラー画面
 .error-message {
   list-style: none;
 }
 
+.text {
+  list-style: none;
+}
+
+
 
 
 // ログイン画面 
 .form-wrap {
+  position: relative;
   text-align: center;
+  border: 1px solid brown ;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  border-radius: 50%;
+}
+
+.form-wrap-inner {
+  margin: 85px 0;
+}
+
+.form-header {
+  text-align: center;
+}
+
+.form-header-text {
+  border: 1px solid white ;
+  width: 200px;
+  text-align: center;
+  margin-left: 150px;
+  background-color: #FDDCBD;
+  color: white;
+  border-radius: 6px;
 
 }
-.text {
-  list-style: none;
+
+.field {
+  margin-bottom: 30px;
+}
+
+.field-text {
+  border: 1px solid white ;
+  width: 100px;
+  text-align: center;
+  margin-bottom: 25px;
+  background-color: #FDDCBD;
+  color: white;
+  border-radius: 6px;
+}
+
+form-text {
+  border: 1px solid brown ;
+}
+
+.button {
+}
+.btn  {
+  border: 1px solid white ;
+  width: 150px;
+  text-align: center;
+  margin-left: 175px;
+  background-color: #FDDCBD;
+  color: white;
+  border-radius: 6px;
+  margin-right: 100px;
+}
+
+.actions {
+  margin-right: 75px;
+}
+
+a {
+  margin-right: 75px;
 }
 
 // サインアップ画面
