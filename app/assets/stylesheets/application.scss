@@ -113,10 +113,15 @@ a {
   height: 500px;
   margin: 100px auto;
   border-radius: 50%;
+  padding-top: 25px;
+}
+
+.field-2 {
+
 }
 
 .form-header-text-sign-up {
-  maborder: 1px solid white ;
+  border: 1px solid white ;
   width: 150px;
   text-align: center;
   margin-bottom: 25px;
@@ -124,22 +129,35 @@ a {
   color: white;
   border-radius: 6px;
   margin: 15px 0 0 173px;
+  font-size: 20px;
 }
 
 .field-text-sign-up {
 border: 1px solid white ;
 width: 150px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   background-color: #FDDCBD;
   color: white;
   border-radius: 6px;
 }
 
-.form-text-sign-up {
-  
+#nickname {
 }
+
+.field-text-sign-up-1 {
+  border: 1px solid white ;
+  width: 150px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    background-color: #FDDCBD;
+    color: white;
+    border-radius: 6px;
+    display: block;
+    margin-left: 175px;
+  }
 
 .field-text-sign-up-2 {
 border: 1px solid white ;
@@ -150,10 +168,29 @@ width: 150px;
   background-color: #FDDCBD;
   color: white;
   border-radius: 6px;
+  display: block;
+  margin-left: 175px;
+}
+.field-text-sign-up-3 {
+border: 1px solid white ;
+width: 150px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  background-color: #FDDCBD;
+  color: white;
+  border-radius: 6px;
+  display: block;
+  margin-left: 175px;
+}
+
+.form-text-wrap {
+  margin-top: 20px;
 }
 
 .actions {
   text-align: center;
+  margin-top: 30px;
 }
 
 .field {
