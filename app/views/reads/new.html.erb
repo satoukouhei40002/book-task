@@ -1,107 +1,114 @@
 <div class='timer'>
-  <h1>読書をしましょう！！！</h1>
-  <div>6分が推奨時間です!</div>
+  <div class="timer-contents">
+    <h1 class="read-title">読書をしましょう！！！</h1>
+    <div class="timer-title">6分が推奨時間です!</div>
 
-  <form name="timer">
-    <input type="text" value="">分
-    <input type="text" value="">秒<br>
-    <input type="button" value="スタート" onclick="cntStart()">
-    <input type="button" value="ストップ" onclick="cntStop()">
-  </form>
+    <form name="timer">
+      <input type="text" value="" class="timer-form">分
+      <input type="text" value="" class="timer-form">秒<br>
+      <input class="start-btn" type="button" value="スタート" onclick="cntStart()">
+      <input class="stop-btn" type="button" value="ストップ" onclick="cntStop()">
+    </form>
 
-  <script>
+    <script>
+    var timer1; //タイマーを格納する変数（タイマーID）の宣言
 
-  var timer1; //タイマーを格納する変数（タイマーID）の宣言
 
+//カウントダウン関数を1000ミリ秒毎に呼び出す関数
+function cntStart()
+{
+  document.timer.elements[2].disabled=true;
+  timer1=setInterval("countDown()",1000);
+}
 
-  //カウントダウン関数を1000ミリ秒毎に呼び出す関数
-  function cntStart()
+//タイマー停止関数
+function cntStop()
+{
+  document.timer.elements[2].disabled=false;
+  clearInterval(timer1);
+}
+
+//カウントダウン関数
+function countDown()
+{
+  var min=document.timer.elements[0].value;
+  var sec=document.timer.elements[1].value;
+  
+  if( (min=="") && (sec=="") )
   {
-    document.timer.elements[2].disabled=true;
-    timer1=setInterval("countDown()",1000);
+    alert("時刻を設定してください！");
+    reSet();
   }
-
-  //タイマー停止関数
-  function cntStop()
+  else
   {
-    document.timer.elements[2].disabled=false;
-    clearInterval(timer1);
-  }
-
-  //カウントダウン関数
-  function countDown()
-  {
-    var min=document.timer.elements[0].value;
-    var sec=document.timer.elements[1].value;
+    if (min=="") min=0;
+    min=parseInt(min);
     
-    if( (min=="") && (sec=="") )
-    {
-      alert("時刻を設定してください！");
-      reSet();
-    }
-    else
-    {
-      if (min=="") min=0;
-      min=parseInt(min);
-      
-      if (sec=="") sec=0;
-      sec=parseInt(sec);
-      
-      tmWrite(min*60+sec-1);
-    }
-  }
-
-  //残り時間を書き出す関数
-  function tmWrite(int)
-  {
-    int=parseInt(int);
+    if (sec=="") sec=0;
+    sec=parseInt(sec);
     
-    if (int<=0)
-    {
-      reSet();
-      alert("時間です！");
-    }
-    else
-    {
-      //残り分数はintを60で割って切り捨てる
-      document.timer.elements[0].value=Math.floor(int/60);
-      //残り秒数はintを60で割った余り
-      document.timer.elements[1].value=int % 60;
-    }
+    tmWrite(min*60+sec-1);
   }
+}
 
-  //フォームを初期状態に戻す（リセット）関数
-  function reSet()
+//残り時間を書き出す関数
+function tmWrite(int)
+{
+  int=parseInt(int);
+  
+  if (int<=0)
   {
-    document.timer.elements[0].value="0";
-    document.timer.elements[1].value="0";
-    document.timer.elements[2].disabled=false;
-    clearInterval(timer1);
-  }  
-    
-  </script>
+    reSet();
+    alert("時間です！");
+  }
+  else
+  {
+    //残り分数はintを60で割って切り捨てる
+    document.timer.elements[0].value=Math.floor(int/60);
+    //残り秒数はintを60で割った余り
+    document.timer.elements[1].value=int % 60;
+  }
+}
 
-  <%= form_with(model: @read, local: true) do |f| %>
-    <div class="title">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
+//フォームを初期状態に戻す（リセット）関数
+function reSet()
+{
+  document.timer.elements[0].value="0";
+  document.timer.elements[1].value="0";
+  document.timer.elements[2].disabled=false;
+  clearInterval(timer1);
+}</script>
 
-      <div class="time">
-      <%= f.label :start_time %>
-      <%= f.datetime_select :start_time %>
-    </div>
+    <%= form_with(model: @read, local: true) do |f| %>
+      <div class="title">
+        <div class="title-name">
+          <%= f.label :本の名前 %>
+        </div>
+        <div class="title-form">
+          <%= f.text_field :title %>
+        </div>
+      </div>
 
-    <div class="content">
-      <%= f.label :content %>
-      <%= f.text_field :content %>
-    </div>
+        <div class="time">
+        <%= f.label :start_time %>
+        <%= f.datetime_select :start_time %>
+      </div>
+
+      <div class="content">
+        <div class="content-name">
+          <%= f.label :本の内容 %>
+        </div>
+        <div class="content-form">
+          <%= f.text_area :content %>
+        </div>
+      </div>
 
 
-    <div class="submit">
-      <%= f.submit "投稿する", class: "btn btn-primary" %>
-    </div>
+      <div class="submit">
+        <%= f.submit "投稿する", class: "btn btn-primary" %>
+      </div>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>
 

@@ -3,15 +3,16 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <div class="navbar-bran">読書習慣化アプリ</div>
-      
-
-      <% if user_signed_in? %>
-        <%= link_to '/reads/new', class: 'login' do %>
-          <button type="button" class="btn btn-primary">読書を始める</button>
+      <div class="header-btn-right">
+        <% if user_signed_in? %>
+          <div class="header-btn-right-left">
+            <%= link_to '/reads/new', class: 'new' do %>
+              <button type="button" class="btn btn-primary">読書を始める</button>
+            <% end %>
+          </div>
+          <%= link_to 'ログアウト', "/users/sign_out", data: { turbo_method: :delete },  class: "btn btn-primary logout" %> 
         <% end %>
-        <%= link_to 'ログアウト', "/users/sign_out", data: { turbo_method: :delete },  class: "btn btn-primary logout" %> 
-      <% end %>
-
+      </div>
       </div>
     </div>
   </nav>
